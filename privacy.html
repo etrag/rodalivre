@@ -37,8 +37,9 @@
 
   <h2>Feedback (optional)</h2>
   <p>If you tap <strong>Send feedback</strong>, the app sends the message you write, the contact detail you choose to add,
-  and, if you leave the switch on, technical details: the app version, your iOS version, your phone model, the bike's name
-  and the Bluetooth diagnostics of your bike. This is sent to a small relay running on Cloudflare, which creates a private
+  and, if you leave the switch on, technical details: the app version, your iOS version, your phone model, the Bluetooth names
+  of your bike and of nearby heart rate sensors, the Bluetooth diagnostics of your bike, and a note of which dials of the
+  dashboard had a value, were zero or were empty (never the values themselves). The optional <em>Compatibility check</em> sends the same kind of information (which values your bike sends, and whether the resistance control responded), only when you tap Send. This is sent to a small relay running on Cloudflare, which creates a private
   issue in our GitHub repository so we can read it. We use it only to fix problems and improve the app, and delete it when it
   is no longer needed.</p>
 
