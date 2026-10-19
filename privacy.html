@@ -10,18 +10,20 @@
 <main>
   <nav><a href="index.html">Support</a><a href="privacy.html">Privacy policy</a></nav>
   <h1>Privacy policy</h1>
-  <p class="muted">Roda Livre for iPhone. Last updated: 10 October 2026.</p>
+  <p class="muted">Roda Livre for iPhone. Last updated: 18 October 2026.</p>
 
   <p>Roda Livre is made by Ricardo Gon&ccedil;alves, an individual developer based in Portugal
   ("we"). This policy explains what the app does with your information. In short: your ride data stays on your
-  phone unless you choose to send it somewhere, we run no accounts and no analytics, and the only
+  phone unless you choose to send it somewhere, we run no accounts, we only count anonymous taps and screens (you can switch that off), and the only
   third party that gets data automatically is the ad network that pays for the free app.</p>
 
   <h2>What stays on your device</h2>
   <ul>
     <li><strong>Ride data</strong> (speed, power, cadence, distance, heart rate, time) read from your bike and,
     optionally, a heart rate source over Bluetooth. It is used to show the dashboard and to build the
-    <code>.fit</code> file of a ride. Nothing is uploaded unless you use Garmin upload or share the file yourself.</li>
+    <code>.fit</code> file of a ride. The last 30 rides are kept on the phone (in <strong>Rides</strong>, excluded from
+    backups) until you delete them, so you can upload or share them later. Nothing is uploaded unless you use Garmin
+    upload or share the file yourself.</li>
     <li><strong>Settings</strong> such as your unit preference.</li>
     <li><strong>Garmin session tokens</strong>, if you sign in to Garmin. They are kept in the iOS Keychain.
     The app never stores your Garmin password.</li>
@@ -40,8 +42,19 @@
   and, if you leave the switch on, technical details: the app version, your iOS version, your phone model, the Bluetooth names
   of your bike and of nearby heart rate sensors, the Bluetooth diagnostics of your bike, and a note of which dials of the
   dashboard had a value, were zero or were empty (never the values themselves). The optional <em>Compatibility check</em> sends the same kind of information (which values your bike sends, and whether the resistance control responded), only when you tap Send. This is sent to a small relay running on Cloudflare, which creates a private
-  issue in our GitHub repository so we can read it. We use it only to fix problems and improve the app, and delete it when it
-  is no longer needed.</p>
+  issue in our GitHub repository so we can read it. We use it only to fix problems and improve the app. Once we have dealt with a report and closed it, the contact
+  detail and the Bluetooth device names in it are removed automatically after 90 days; the rest is deleted when it is no
+  longer needed.</p>
+
+  <h2>Anonymous usage statistics (optional, on by default)</h2>
+  <p>To see which screens and buttons are used, and where connecting to a bike goes wrong, the app sends short anonymous
+  events: for example "the Settings screen was opened", "Start recording was tapped", "connecting took about 10 seconds and
+  succeeded", "this bike offers level control, distance and heart rate", or the length of a ride in broad steps (under 5 minutes,
+  5 to 15, and so on). Each event carries a random identifier made every time the app starts, which is not linked to you, your
+  phone or any account, plus the app version, the iOS version and the phone model. It never includes ride numbers (speed, power,
+  heart rate, distance), Bluetooth device names, free text, your location or your Garmin account. The events are stored for
+  180 days in a database on Cloudflare and used only to improve the app. You can turn this off at any time in
+  <strong>Settings &gt; Share anonymous usage</strong>; nothing is sent after that.</p>
 
   <h2>Ads</h2>
   <p>Roda Livre is free and shows ads served by <strong>Google AdMob</strong>. To show and measure ads, Google and its
@@ -59,7 +72,7 @@
   </ul>
 
   <h2>What we do not do</h2>
-  <p>We do not sell your data, we do not build profiles, we do not run analytics or crash-reporting services, and the
+  <p>We do not sell your data, we do not build profiles, we do not use third-party analytics or crash-reporting services (the anonymous statistics above stay in our own database), and the
   app has no accounts of its own.</p>
 
   <h2>Children</h2>
@@ -67,7 +80,7 @@
 
   <h2>Your rights</h2>
   <p>Under the GDPR you can ask us for access to, correction of, or deletion of any personal data we hold. The only data we
-  hold is what you send us through the feedback screen. For data held by Garmin or Google, contact them directly. You also have
+  hold is what you send us through the feedback screen and the anonymous usage events, which cannot be tied to you. For data held by Garmin or Google, contact them directly. You also have
   the right to complain to your data protection authority (in Portugal, the
   <a href="https://www.cnpd.pt">CNPD</a>).</p>
 
